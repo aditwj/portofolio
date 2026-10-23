@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adit Wijaya — Informatics Engineering Student</title>
+  <meta name="description"
+    content="Portofolio pribadi Adit Wijaya, mahasiswa Teknik Informatika yang sedang membangun kemampuan di bidang web development.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="top">
+    <div class="container navbar__inner">
+      <a href="#top" class="navbar__logo">Adit Wijaya</a>
+      <nav class="navbar__nav" aria-label="Main navigation">
+        <a href="#work" class="navbar__link">Work</a>
+        <a href="#about" class="navbar__link">About</a>
+        <a href="#skills" class="navbar__link">Skills</a>
+        <a href="#contact" class="navbar__link">Contact</a>
+      </nav>
+      <a href="#contact" class="navbar__cta">Let's Talk</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <span class="hero__label">Informatics Engineering Student</span>
+          <h1 class="hero__name">
+            Adit<br>Wijaya
+          </h1>
+          <p class="hero__tagline">Building digital experiences with purpose.</p>
+          <p class="hero__desc">
+            Saya mahasiswa Teknik Informatika yang sedang mempelajari pengembangan web.
+            Tertarik membangun solusi digital yang berguna dan bisa memberikan dampak nyata,
+            meskipun masih terus belajar setiap hari.
+          </p>
+          <div class="hero__actions">
+            <a href="#work" class="btn btn--primary">Explore My Work</a>
+            <a href="#contact" class="btn btn--outline">Get in Touch</a>
+            <!-- Ganti href di bawah dengan path file CV kamu -->
+            <a href="assets/CVADITWIJAYA (1).pdf" class="btn btn--text" download>Download CV ↓</a>
+          </div>
+        </div>
+        <div class="hero__photo-wrapper">
+          <!-- Ganti src dengan foto profil kamu -->
+          <img src="assets/newfotoadit.jpeg" alt="Foto Adit Wijaya" class="hero__photo" width="400" height="520">
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <span class="section__label">About</span>
+        <h2 class="section__title">Sedikit tentang saya</h2>
+        <div class="about__content">
+          <p>
+            Saya Adit, mahasiswa Teknik Informatika yang saat ini sedang fokus mempelajari
+            web development. Mulai tertarik dengan dunia programming sejak semester awal,
+            dan sejak itu mencoba membangun berbagai proyek kecil untuk mengasah kemampuan.
+          </p>
+          <p>
+            Saya percaya bahwa cara terbaik untuk belajar adalah dengan membuat sesuatu
+            yang nyata. Jadi, selain mengikuti perkuliahan, saya juga mencoba menerapkan
+            apa yang dipelajari ke dalam proyek-proyek yang bisa digunakan orang lain —
+            meskipun masih sederhana.
+          </p>
+          <p>
+            Di luar coding, saya suka mengeksplorasi desain antarmuka dan mempelajari
+            bagaimana produk digital yang baik dirancang. Masih banyak yang harus dipelajari,
+            tapi saya menikmati prosesnya.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SELECTED WORK ========== -->
+    <section class="section work" id="work">
+      <div class="container">
+        <span class="section__label">Selected Work</span>
+        <h2 class="section__title">Proyek yang sudah dikerjakan</h2>
+
+        <div class="work__list">
+
+          <!-- Proyek 1: ToiFind -->
+          <article class="work__item">
+            <div class="work__item-header">
+              <h3 class="work__item-title">ToiFind</h3>
+              <!-- Ganti href dengan link proyek -->
+              <a href="#" class="work__item-link" target="_blank" rel="noopener">Lihat Proyek →</a>
+            </div>
+            <p class="work__item-desc">
+              Aplikasi untuk membantu pengguna menemukan toilet umum terdekat.
+              Dibuat karena sering mengalami kesulitan mencari toilet di tempat yang tidak familiar.
+            </p>
+            <div class="work__item-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Maps API</span>
+            </div>
+          </article>
+
+          <!-- Proyek 2 -->
+          <article class="work__item">
+            <div class="work__item-header">
+              <h3 class="work__item-title">Personal Portfolio</h3>
+              <a href="#" class="work__item-link" target="_blank" rel="noopener">Lihat Proyek →</a>
+            </div>
+            <p class="work__item-desc">
+              Website portofolio pribadi yang sedang kamu lihat sekarang.
+              Dibangun dari nol menggunakan HTML dan CSS murni sebagai latihan
+              untuk memahami layout, tipografi, dan responsive design.
+            </p>
+            <div class="work__item-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+            </div>
+          </article>
+
+          <!-- Proyek 3: tambahkan proyek lain di sini -->
+          <article class="work__item">
+            <div class="work__item-header">
+              <h3 class="work__item-title">Nama Proyek Berikutnya</h3>
+              <a href="#" class="work__item-link" target="_blank" rel="noopener">Lihat Proyek →</a>
+            </div>
+            <p class="work__item-desc">
+              Deskripsi singkat tentang proyek ini — masalah apa yang ingin diselesaikan
+              dan bagaimana pendekatanmu. Ganti teks ini dengan deskripsi proyek kamu.
+            </p>
+            <div class="work__item-tech">
+              <span class="tech-tag">Tech 1</span>
+              <span class="tech-tag">Tech 2</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <span class="section__label">Skills</span>
+        <h2 class="section__title">Yang sedang saya pelajari & gunakan</h2>
+        <div class="skills__grid">
+          <div class="skills__group">
+            <h3 class="skills__group-title">Languages</h3>
+            <ul class="skills__list">
+              <li class="skills__item">HTML</li>
+              <li class="skills__item">CSS</li>
+              <li class="skills__item">Python</li>
+            </ul>
+          </div>
+          <div class="skills__group">
+            <h3 class="skills__group-title">Tools & Platform</h3>
+            <ul class="skills__list">
+              <li class="skills__item">Git</li>
+              <li class="skills__item">VS Code</li>
+              <li class="skills__item">GitHub</li>
+            </ul>
+          </div>
+          <div class="skills__group">
+            <h3 class="skills__group-title">Currently Learning</h3>
+            <ul class="skills__list">
+              <li class="skills__item">JavaScript</li>
+              <li class="skills__item">React</li>
+              <li class="skills__item">Node.js</li>
+              <li class="skills__item">SQL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact" id="contact">
+      <div class="container contact__inner">
+        <span class="section__label">Contact</span>
+        <h2 class="contact__title">Ada ide atau mau ngobrol?</h2>
+        <p class="contact__desc">
+          Saya terbuka untuk diskusi, kolaborasi proyek, atau sekadar bertukar pikiran
+          tentang web development. Jangan ragu untuk menghubungi saya.
+        </p>
+        <!-- Ganti email di bawah dengan email kamu -->
+        <a href="https://mail.google.com/mail/?view=cm&to=aditw3110@gmail.com" class="contact__link" target="_blank"
+          rel="noopener noreferrer" aria-label="Send email">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          Email
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">© 2026 Adit Wijaya</p>
+      <a href="#top" class="footer__back">Kembali ke atas ↑</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

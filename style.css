@@ -1,0 +1,593 @@
+/* ================================================================
+   STYLE.CSS — Portofolio Adit Wijaya
+   
+   Sistem desain:
+   - Font     : Inter (Google Fonts)
+   - Warna    : dark green-black palette
+   - Layout   : max-width 1120px, CSS Grid + Flexbox
+   - Spacing  : kelipatan 8px (8, 16, 24, 32, 48, 64, 96)
+   ================================================================ */
+
+
+/* --------------------------------
+   1. CSS CUSTOM PROPERTIES
+   -------------------------------- */
+:root {
+  /* Warna utama */
+  --bg:           #191C17;
+  --bg-elevated:  #1F221B;
+  --text-primary: #E8E9E3;
+  --text-secondary: #A3A69D;
+  --accent:       #A7B99E;
+  --accent-hover: #BFD0B4;
+  --border:       #393D34;
+  --border-light: #2D3128;
+
+  /* Tipografi */
+  --font-family:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-base:    1rem;        /* 16px */
+  --font-sm:      0.875rem;    /* 14px */
+  --font-xs:      0.8125rem;   /* 13px */
+  --font-lg:      1.125rem;    /* 18px */
+  --font-xl:      1.25rem;     /* 20px */
+  --font-2xl:     1.5rem;      /* 24px */
+  --font-3xl:     2rem;        /* 32px */
+  --font-hero:    4.5rem;      /* 72px */
+
+  /* Spacing */
+  --space-xs:     0.5rem;      /* 8px */
+  --space-sm:     1rem;        /* 16px */
+  --space-md:     1.5rem;      /* 24px */
+  --space-lg:     2rem;        /* 32px */
+  --space-xl:     3rem;        /* 48px */
+  --space-2xl:    4rem;        /* 64px */
+  --space-3xl:    6rem;        /* 96px */
+
+  /* Layout */
+  --max-width:    1120px;
+  --radius:       6px;
+
+  /* Transisi */
+  --transition:   200ms ease;
+}
+
+
+/* --------------------------------
+   2. RESET & BASE
+   -------------------------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* offset untuk fixed navbar */
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-base);
+  line-height: 1.7;
+  color: var(--text-primary);
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* --------------------------------
+   3. LAYOUT UTILITIES
+   -------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+
+/* --------------------------------
+   4. NAVBAR
+   -------------------------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(25, 28, 23, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.navbar__logo {
+  font-size: var(--font-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.navbar__nav {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.navbar__link {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  transition: color var(--transition);
+}
+
+.navbar__link:hover {
+  color: var(--text-primary);
+}
+
+.navbar__cta {
+  font-size: var(--font-sm);
+  font-weight: 500;
+  color: var(--bg);
+  background-color: var(--accent);
+  padding: 8px 20px;
+  border-radius: var(--radius);
+  transition: background-color var(--transition);
+}
+
+.navbar__cta:hover {
+  background-color: var(--accent-hover);
+}
+
+
+/* --------------------------------
+   5. HERO SECTION
+   -------------------------------- */
+.hero {
+  padding-top: calc(64px + var(--space-3xl));
+  padding-bottom: var(--space-3xl);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.hero__label {
+  display: inline-block;
+  font-size: var(--font-xs);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-md);
+}
+
+.hero__name {
+  font-size: var(--font-hero);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.hero__tagline {
+  font-size: var(--font-xl);
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: var(--space-sm);
+}
+
+.hero__desc {
+  font-size: var(--font-base);
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin-bottom: var(--space-lg);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.hero__photo-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero__photo {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+
+/* --------------------------------
+   6. BUTTONS
+   -------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--font-sm);
+  font-weight: 500;
+  font-family: var(--font-family);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.btn--primary {
+  padding: 12px 24px;
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+.btn--primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn--outline {
+  padding: 12px 24px;
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.btn--outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn--text {
+  padding: 12px 4px;
+  color: var(--text-secondary);
+  background: none;
+}
+
+.btn--text:hover {
+  color: var(--accent);
+}
+
+
+/* --------------------------------
+   7. SECTION (shared styles)
+   -------------------------------- */
+.section {
+  padding: var(--space-3xl) 0;
+}
+
+.section__label {
+  display: block;
+  font-size: var(--font-xs);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-sm);
+}
+
+.section__title {
+  font-size: var(--font-3xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xl);
+  line-height: 1.2;
+}
+
+
+/* --------------------------------
+   8. ABOUT SECTION
+   -------------------------------- */
+.about {
+  border-top: 1px solid var(--border-light);
+}
+
+.about__content {
+  max-width: 680px;
+}
+
+.about__content p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  font-size: var(--font-base);
+  line-height: 1.8;
+}
+
+.about__content p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* --------------------------------
+   9. WORK / PROJECTS SECTION
+   -------------------------------- */
+.work {
+  border-top: 1px solid var(--border-light);
+}
+
+.work__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.work__item {
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.work__item:first-child {
+  border-top: 1px solid var(--border-light);
+}
+
+.work__item-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs);
+  gap: var(--space-sm);
+}
+
+.work__item-title {
+  font-size: var(--font-2xl);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.work__item-link {
+  font-size: var(--font-sm);
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: color var(--transition);
+}
+
+.work__item-link:hover {
+  color: var(--accent-hover);
+}
+
+.work__item-desc {
+  font-size: var(--font-base);
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin-bottom: var(--space-sm);
+  line-height: 1.7;
+}
+
+.work__item-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.tech-tag {
+  font-size: var(--font-xs);
+  color: var(--accent);
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  border-radius: var(--radius);
+}
+
+
+/* --------------------------------
+   10. SKILLS SECTION
+   -------------------------------- */
+.skills {
+  border-top: 1px solid var(--border-light);
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.skills__group-title {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  letter-spacing: -0.01em;
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.skills__item {
+  font-size: var(--font-base);
+  color: var(--text-secondary);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-light);
+  transition: color var(--transition);
+}
+
+.skills__item:hover {
+  color: var(--accent);
+}
+
+
+/* --------------------------------
+   11. CONTACT SECTION
+   -------------------------------- */
+.contact {
+  border-top: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.contact__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__title {
+  font-size: var(--font-3xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
+}
+
+.contact__desc {
+  font-size: var(--font-base);
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin-bottom: var(--space-lg);
+  line-height: 1.7;
+}
+
+.contact__btn {
+  font-size: var(--font-base);
+}
+
+
+/* --------------------------------
+   12. FOOTER
+   -------------------------------- */
+.footer {
+  border-top: 1px solid var(--border-light);
+  padding: var(--space-lg) 0;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__text {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+.footer__back {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  transition: color var(--transition);
+}
+
+.footer__back:hover {
+  color: var(--accent);
+}
+
+
+/* ================================================================
+   13. RESPONSIVE — TABLET (max-width: 768px)
+   ================================================================ */
+@media (max-width: 768px) {
+  :root {
+    --font-hero: 3rem;        /* 48px */
+    --font-3xl:  1.75rem;     /* 28px */
+  }
+
+  .navbar__nav {
+    display: none; /* menu disembunyikan di mobile, bisa dikembangkan nanti */
+  }
+
+  .hero {
+    padding-top: calc(64px + var(--space-xl));
+    padding-bottom: var(--space-xl);
+    min-height: auto;
+  }
+
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  /* Foto dipindah ke bawah di mobile */
+  .hero__photo-wrapper {
+    order: -1;
+    justify-content: center;
+  }
+
+  .hero__photo {
+    max-width: 260px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+}
+
+
+/* ================================================================
+   14. RESPONSIVE — SMALL MOBILE (max-width: 480px)
+   ================================================================ */
+@media (max-width: 480px) {
+  :root {
+    --font-hero: 2.5rem;      /* 40px */
+    --font-3xl:  1.5rem;      /* 24px */
+    --font-2xl:  1.25rem;     /* 20px */
+  }
+
+  .container {
+    padding: 0 var(--space-sm);
+  }
+
+  .hero__photo {
+    max-width: 200px;
+  }
+
+  .work__item-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    gap: var(--space-xs);
+    text-align: center;
+  }
+}
